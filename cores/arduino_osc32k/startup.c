@@ -53,9 +53,9 @@ void SystemInit( void )
   NVMCTRL->CTRLB.bit.RWS = NVMCTRL_CTRLB_RWS_HALF_Val ;
   PM->APBAMASK.reg |= PM_APBAMASK_GCLK; //| PM_APBAMASK_RTC;
 
-  // board_init_osc32k();
+   board_init_osc32k();
   // board_init_osc8m();
-  board_init_xosc();
+  //board_init_xosc();
   board_init_dfll48_closed( GCLK_CLKCTRL_GEN_GCLK1 );
 
   board_init_set_dfll48_as_master();
